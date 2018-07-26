@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Manoel Quirino Neto"]
   spec.email         = ["manoelifpb@gmail.com"]
 
-  spec.summary       = %q{Provide a easy way to queue some messages and push them in batches.}
+  spec.summary       = %q{Provides an easy way to queue some messages and push them in batches.}
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
