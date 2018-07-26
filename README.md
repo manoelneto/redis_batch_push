@@ -24,7 +24,7 @@ POST /view -d '{id: 3}'
 
 and for each post you should do
 
-```
+```ruby
 model = Table.find(id)
 model.view += 1
 model.save
@@ -32,7 +32,7 @@ model.save
 
 with this gem you can reduce your data to make one incr by id
 
-```
+```ruby
 # in post
 redis.lpush queue, view
 
@@ -45,13 +45,19 @@ runner.run do |views|
   end
 
   # Now you have to make 3 incr, 1 by id
-  print views_by_id
-
+  # views_by_id
   # {
   #   "1" => 3,
   #   "2" => 1,
   #   "3" => 1,
+  #    ID => COUNT
   # }
+  
+  views_by_id.each do |id, count|
+    model = Table.find id
+    model.views += count
+    model.save
+  end
 end
 
 ```
