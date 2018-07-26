@@ -30,7 +30,7 @@ model.view += 1
 model.save
 ```
 
-with this gem you can reduce your data to make one incr by once
+with this gem you can reduce your data to make one incr by id
 
 ```
 # in post
