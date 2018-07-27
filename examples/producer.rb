@@ -16,5 +16,5 @@ loop do
   sleep 0.1
 
   # if you want to see data printed by ellapsed time
-  sleep 1
+  # sleep 1
 end
